@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: yellow;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(./ilya-pavlov-OqtafYT5kTw-unsplash.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    color: wheat;
+    font-size: 30px;
+    text-decoration: overline;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+header .navigation a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+    background-color: rgb(25, 13, 13);
+}
+header .navigation a:not(:last-child){
+     margin-right: 30px; 
+}
+header .navigation a:hover{
+    background: #dbe21f;
+    color: rgb(185, 58, 55);
+}
+.content{
+    max-width: 650px;
+    margin: 60px 100px;
+
+}
+.content .info h2{
+    color: yellow;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+
+}
+.content .info h2 span{
+    color: red;
+    font-size: 50px;
+    font-weight: 600;
+}
+.content .info p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 40px;
+
+}
+.content .info-btn{
+    color: rgb(6, 162, 43);
+    background: rgb(73, 73, 8);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    transition-property: background;
+
+}
+
+.content .info-btn:hover{
+    background: rgb(6, 48, 48);
+}
+.media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transition: 0.3s;
+    transition-property: transform;
+}
+.media-icons a{
+    position: relative;
+    color: rgb(135, 5, 5);
+    font-size: 25px;
+}
+.media-icons a:not(:last-child){
+    margin-right: 60px;
+
+}
+.media-icons a:hover{
+    transform: scale(1,5);
+}
+label{
+    display: none;
+}
+#check {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* Responsive styles */
+@media(max-width:768px){
+    header .navigation{
+        display: none;
+    }
+    label {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+          
+    }
+    label:hover{
+        color: rgb(120, 105, 105);
+
+    }
+    label .close-btn{
+        display: none;
+    }
+    #check:checked ~ header .navigation{
+        z-index: 2;
+        position: fixed;
+        background: rgb(120, 105, 105);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+}
